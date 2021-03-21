@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app = 'app'>
+<div ng-controller = 'controller'>
+    <div class="navigation">
+        <h2>MyBlogPage</h2>
+        <input class="search" ng-model="searchText" placeholder="search">
+          <ul class="unOrdered">
+              <li class="list"><a href="contact.html">Contact</a></li>
+              <li class="list" ><a href="about.html">About</a></li>
+              <li class="list"><a href="home.html">Home</a></li>
+              
+              
+          </ul>
+      </div>
+         <!--  Modal -->
+  <div id="MyModal" class="modal">
+  
+      <!-- Modal sadrzžaj -->
+      <div class="modal-content">
+        <p> <h1>Sadržaj neki</h1>
+            <hr>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste cumque quibusdam suscipit eaque nobis asperiores unde excepturi quaerat nostrum illo, veritatis exercitationem libero iusto dignissimos similique quis ullam voluptas commodi provident sed quae explicabo eveniet architecto nam. Optio ea dolore iure, dolor inventore rerum blanditiis vel cum numquam autem sunt repudiandae facilis dolores veritatis cupiditate voluptates aut. Ullam fuga maiores molestiae, recusandae nobis nostrum totam in labore voluptatum
+            <br>
+            <hr>
+            <button onclick="ugasiMe()" class="ugasi2">Do something</button> 
+            <button onclick="ugasiMe()" class="ugasi">Ugasi Me</button>
+        </p>
+      </div>
+    
+    </div>
+    
+                     
+      <main class="kartice">
+          <div class="card1" ng-repeat = 'cart in cartica | filter:searchText'>
+              <img src='{{cart.img}}'' alt="Jeans" class="jeans">
+              <h3>{{cart.h3}}</h3>
+            
+              <button onclick="proradi()" id="dugme1" class="dugme">info</button>
+          </div>
+          <div class="card2" ng-repeat = 'cart in cartica2  | filter:searchText'>
+              <img src="{{cart.img}}" alt="Jeans" class="jeans">
+              <h3>{{cart.h3}}</h3>
+            
+              <button onclick="proradi()" id="dugme1" class="dugme">info</button>
+          </div>
+          <div class="card3"ng-repeat = 'cart in cartica3  | filter:searchText'>
+              <img src="{{cart.img}}" alt="Jeans" class="jeans">
+              <h3>{{cart.h3}}</h3>
+               
+              <button onclick="proradi()"  id="dugme1"class="dugme">info</button>
+          </div>
+          <div class="card4"ng-repeat = 'cart in cartica4  | filter:searchText'>
+              <img src="{{cart.img}}" alt="Jeans" class="jeans">
+              <h3>{{cart.h3}}</h3>
+             
+              <button onclick="proradi()"  id="dugme1" class="dugme">info</button>
+          </div>
+          
+       
+      </main>
+     
+      <div class="table">
+        <table id="searchTextResults">
+            <tr><th>Ime Kompanije</th><th>Kontakt telefon</th></tr>
+            <tr ng-repeat="friend in friends | filter:searchText">
+              <td>{{friend.name}}</td>
+              <td>{{friend.phone}}</td>
+            </tr>
+          </table>
+      </div>
+             <footer>
+                 
+                 <p class="ftr">Ja sam footer</p>
+             </footer>
+  
+             
+  
+          
+            
+      
+</div>
+  
+    
+      
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

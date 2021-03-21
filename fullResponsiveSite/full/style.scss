@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://wallpaperstock.net/ocean-pretty-cliffs-australia-wallpapers_49742_1920x1200.jpg');
+    background-attachment: fixed;
+}
+$nav-use:(
+    wdth : 100%,
+    hgt : 250px,
+    dspl : flex,
+    algn : center,
+    jst : space-between
+
+);
+.navigation{
+    width: map-get($nav-use , wdth );
+    height: map-get($nav-use , hgt );
+    
+    display: map-get($nav-use, dspl );
+   align-items: map-get($nav-use, algn );
+   justify-content: map-get($nav-use, jst );
+}
+h2{
+    font-family: 'Ranchers', cursive; ;
+    font-size: 90px;
+    padding: 30px;
+}
+
+
+.unOrdered {
+    display: inline;
+   
+}
+$list-use:(
+    dsp : inline,
+    flt : right,
+    ls:none,
+    pd: 50px,
+    fs:15px
+);
+$list-hvr:(
+    hgt:10px,
+    brrd:10px,
+    bck:rgb(148, 16, 16),
+    opc:.6,
+    clr:rgb(255, 255, 255)
+);
+.list  {
+display: map-get($list-use, dsp );
+float: map-get($list-use, flt );
+list-style: map-get($list-use, ls );
+padding: map-get($list-use, pd );
+font-size: map-get($list-use, fs );
+
+
+}
+.list:hover{
+    height: map-get($list-hvr, hgt );
+    border-radius: map-get($list-hvr, brrd );
+    background-color: map-get($list-hvr, bck );
+    opacity: map-get($list-hvr, opc );
+    color: map-get($list-hvr , clr );
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+$cart-use:(
+    dsp:flex,
+    flxdr:row,
+    jst:space-between
+);
+.kartice{
+    display: map-get($cart-use, dsp );
+    flex-direction:map-get($cart-use, flxdr );
+    justify-content: map-get($cart-use, jst );
+    
+}
+$card-use:(
+    w:300px,
+    h:500px,
+    m:10px,
+    mb:50px,
+    ta:center,
+    c:rgb(255, 255, 255),
+    tr:transform 0.5s,
+    bs:10px 10px 5px 0px rgba(0,0,0,0.75)
+);
+$card-hvr:(
+    o:.9,
+    t:translateY(-10px)
+);
+.card1{
+    width: map-get($card-use, w );
+    height: map-get($card-use,h  );
+    margin:map-get($card-use, m ) ;
+    margin-bottom: map-get($card-use, mb );
+    text-align: map-get($card-use, ta );
+    color: map-get($card-use, c);
+    transition: map-get($card-use, tr);
+   box-shadow: map-get($card-use, bs ); 
+}
+.card1:hover{
+    opacity: map-get($card-hvr, o );
+    transform: map-get($card-hvr, t );
+}
+.card2{
+    width: map-get($card-use, w );
+    height: map-get($card-use,h  );
+    margin:map-get($card-use, m ) ;
+    margin-bottom: map-get($card-use, mb );
+    text-align: map-get($card-use, ta );
+    color: map-get($card-use, c);
+    transition: map-get($card-use, tr);
+   box-shadow: map-get($card-use, bs ); 
+}
+
+.card2:hover{
+    opacity: map-get($card-hvr, o );
+    transform: map-get($card-hvr, t );
+}
+.card3{
+    width: map-get($card-use, w );
+    height: map-get($card-use,h  );
+    margin:map-get($card-use, m ) ;
+    margin-bottom: map-get($card-use, mb );
+    text-align: map-get($card-use, ta );
+    color: map-get($card-use, c);
+    transition: map-get($card-use, tr);
+   box-shadow: map-get($card-use, bs ); 
+}
+.card3:hover{
+    opacity: map-get($card-hvr, o );
+    transform: map-get($card-hvr, t );
+}
+.card4{
+    width: map-get($card-use, w );
+    height: map-get($card-use,h  );
+    margin:map-get($card-use, m ) ;
+    margin-bottom: map-get($card-use, mb );
+    text-align: map-get($card-use, ta );
+    color: map-get($card-use, c);
+    transition: map-get($card-use, tr);
+   box-shadow: map-get($card-use, bs ); 
+}
+.card4:hover{
+    opacity: map-get($card-hvr, o );
+    transform: map-get($card-hvr, t );
+}
+.jeans{
+    width:300px ;
+    height: 300px;
+    border-radius: 10px;
+}
+.dugme{
+    background-color: lightskyblue;
+    outline: none;
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+}
+.dugme:hover{
+    background-color: lightslategray;
+}
+$modal-use:(
+    d:none,
+    p:fixed,
+    z:1,
+    l:0,
+    t:0,
+    w:100%,
+    h:100%,
+    of:auto,
+    bc:rgb(0,0,0),
+    bca:rgba(0,0,0,0.4)
+);
+
+.modal{
+    display: map-get($modal-use , d ); 
+    position: map-get($modal-use , p ); 
+    z-index: map-get($modal-use , z ); 
+    left:map-get($modal-use , l );
+    top: map-get($modal-use , t );
+    width: map-get($modal-use , w ); 
+    height: map-get($modal-use , h); 
+    overflow: map-get($modal-use , of ); 
+    background-color: map-get($modal-use , bc); 
+    background-color: map-get($modal-use , bca); 
+    
+}
+$content-use:(
+    bc:#fefefe,
+    m:15% auto,
+    p:8px,
+    br:1px solid #888,
+    w:80%,
+    h:20%
+);
+    .modal-content {
+        background-color: map-get($content-use, bc );
+        margin: map-get($content-use, m ); 
+        padding: map-get($content-use, p );
+        border: map-get($content-use, br );
+        width: map-get($content-use, w ); 
+        height: map-get($content-use, h );
+        
+    
+}
+.ugasi{
+    float: right;
+   background-color:  rgb(148, 16, 16);
+   color: white;
+   outline: none;
+   border-radius: 5px;
+   border: none;
+   height: 25px;
+   margin: 15px;
+}
+.ugasi:hover{
+    opacity: .6;
+}
+.ugasi2{
+    float: right;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    margin: 15px;
+}
+.ugasi2:hover{
+    background-color: rgb(0,0,0);
+    opacity: .6;
+    color: rgb(255, 255, 255);
+}
+.drugi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+footer{
+   
+   
+height: 150px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    
+}
+.ftr{
+text-align: center;
+padding-top: 60px;
+}
+.kartica-za-kontakt{
+   width: 900px;
+   height: 500px;
+    border: 1px solid;
+    margin: auto;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+.kartica-za-kontakt:hover{
+    transform: map-get($card-hvr, t );
+}
+.text{
+    width: 50%;
+    height: 25px;
+    transition: transform 0.5s;
+    margin: 10px;
+}
+.text:hover{
+    transform: map-get($card-hvr, t );
+}
+.send{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(148, 16, 16);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    border-radius:5px ;
+    transition: transform 0.5s;
+}
+.send:hover{
+    opacity: .6;
+    transform: translateY(5px);
+}
+.novi{
+    display: map-get($modal-use , d ); 
+    position: map-get($modal-use , p ); 
+    z-index: map-get($modal-use , z ); 
+    left:map-get($modal-use , l );
+    top: map-get($modal-use , t );
+    width: map-get($modal-use , w ); 
+    height: map-get($modal-use , h); 
+    overflow: map-get($modal-use , of ); 
+    background-color: map-get($modal-use , bc); 
+    background-color: map-get($modal-use , bca); 
+}
+.sadrzaj{
+    background-color: map-get($content-use, bc );
+        margin: map-get($content-use, m ); 
+        padding: map-get($content-use, p );
+        border: map-get($content-use, br );
+        width: map-get($content-use, w ); 
+        height: map-get($content-use, h );
+}
+.kraj{
+    float: right;
+    background-color:  rgb(148, 16, 16);
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    margin: 15px;
+}
+.kraj:hover{
+    opacity: .6;
+}
+.about{
+    color: rgb(255, 255, 255);
+    border: none;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.search{
+    width: 300px;
+    height: 30px;
+   border-radius: 10px;
+   outline: none;
+   border: none;
+   
+}
+.search:hover{
+    opacity: 0.8;
+}
+.table{
+    display: flex;
+    justify-content: center;
+}
+#searchTextResults{
+    margin-bottom: 10px;
+    background-color:rgb(205, 244, 247);
+    color: rgb(3, 3, 3);
+    transition: transform 0.5s;
+}
+#searchTextResults:hover{
+    opacity: .6;
+    transform: map-get($card-hvr, t );
+}
+@media screen and (max-width:600px) {
+.kartice{
+    flex-direction: column;
+}
+.navigation{
+    flex-direction: column;
+}
+}
